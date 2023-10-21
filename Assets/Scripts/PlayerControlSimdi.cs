@@ -9,7 +9,7 @@ public class PlayerControlSimdi : MonoBehaviour
     float input;
     float speed = 6f;
     Vector2 targetVelocity;
-    float jumpForce = 3f;
+    float jumpForce = 9f;
     bool isJumped;
     //bool isGrounded = true;
     bool isAlive;
