@@ -8,6 +8,12 @@ TagManager:
   - Gelecek
   - Simdi
   - Level
+  - key
+  - doorFront
+  - singleBat
+  - doubleBat
+  - tripleBat
+  - fullBat
   layers:
   - Default
   - TransparentFX
