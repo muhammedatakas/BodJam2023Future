@@ -20,14 +20,14 @@ public class Transfer : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno==0)
         {
-            transform.position = new Vector2(Players[0].transform.position.x, 25.0f);
+            Players[1].transform.position = new Vector2(Players[0].transform.position.x, 25.0f);
             Players[playerno].SetActive(false);
             playerno++;
             Players[playerno].SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno == 1)
         {
-            transform.position = new Vector2(Players[1].transform.position.x, 1.0f);
+            Players[0].transform.position = new Vector2(Players[1].transform.position.x, 1.0f);
             Players[playerno].SetActive(false);
             playerno--;
             Players[playerno].SetActive(true);

@@ -13,9 +13,11 @@ public class PlayerControlGelecek : MonoBehaviour
     bool isJumped;
     bool isGrounded = true;
     bool isAlive;
+    Vector3 scale;
 
     void Start()
     {
+        scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         isAlive = true;
     }
@@ -26,11 +28,11 @@ public class PlayerControlGelecek : MonoBehaviour
         input = Input.GetAxisRaw("Horizontal");
         if (input > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(scale.x, scale.y, scale.z);
         }
         else if (input < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
