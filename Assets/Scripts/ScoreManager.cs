@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     public void IncreaseScore()
     {
         score += 1;
-        scoreText.text = ((int)score).ToString();
+        
         
     }
    public void IncreaseSingleBat()
