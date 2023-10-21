@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Transfer : MonoBehaviour
 {
+    public TeleportCheck teleportCheck;
     public static bool isAtAdult;
     float coolDown = 3f;
     float lastTimeTransfer;
@@ -20,7 +21,7 @@ public class Transfer : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno==0 && scoreManager.batteryCounter > 0)
+        if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno==0 && scoreManager.batteryCounter > 0 && teleportCheck.b)
         {isAtAdult = true;  
             Players[1].transform.position = new Vector2(Players[0].transform.position.x,Players[0].transform.position.y + 51.0f);
             camera.transform.position = new Vector3(9,Players[1].transform.position.y,-10);
@@ -29,7 +30,7 @@ public class Transfer : MonoBehaviour
             Players[playerno].SetActive(true);
             scoreManager.DecreaseBattery();
         }
-        else if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno == 1 && scoreManager.batteryCounter > 0 )
+        else if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno == 1 && scoreManager.batteryCounter > 0 && teleportCheck.b)
         {
             isAtAdult = false;
             Players[0].transform.position = new Vector2(Players[1].transform.position.x,Players[1].transform.position.y - 50.0f);
