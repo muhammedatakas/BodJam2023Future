@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerControlSimdi : MonoBehaviour
 {
     Rigidbody2D rb;
     float input;
-    float speed = 10f;
+    float speed = 6f;
     Vector2 targetVelocity;
-    float jumpForce = 12f;
+    float jumpForce = 3f;
     bool isJumped;
     bool isGrounded = true;
-    float lastTimeShoot;
     bool isAlive;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        lastTimeShoot = Time.time;
         isAlive = true;
     }
 
