@@ -11,9 +11,12 @@ public class PlayerControlSimdi : MonoBehaviour
     Vector2 targetVelocity;
     float jumpForce = 3f;
     bool isJumped;
-    bool isGrounded = true;
+    //bool isGrounded = true;
     bool isAlive;
     Vector3 scale;
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
 
     void Start()
     {
@@ -48,12 +51,29 @@ public class PlayerControlSimdi : MonoBehaviour
             targetVelocity = new Vector2(input * speed, rb.velocity.y);
 
             rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.fixedDeltaTime * 10f);
-            if (isGrounded && isJumped)
+            if (isGrounded() && isJumped)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumped = false;
             }
         }
 
+    }
+
+    public bool isGrounded()
+    {
+        if(Physics2D.BoxCast(transform.position, boxSize, 0,-transform.up, castDistance, groundLayer))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position-transform.up * castDistance,boxSize);
     }
 }
