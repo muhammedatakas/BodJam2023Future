@@ -9,13 +9,18 @@ public class PlayerControlGelecek : MonoBehaviour
     float input;
     float speed = 9f;
     Vector2 targetVelocity;
-    float jumpForce = 6f;
+    public float jumpForce = 6f;
     bool isJumped;
-    bool isGrounded = true;
+    //bool isGrounded = true;
     bool isAlive;
+    Vector3 scale;
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
 
     void Start()
     {
+        scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         isAlive = true;
     }
@@ -26,11 +31,11 @@ public class PlayerControlGelecek : MonoBehaviour
         input = Input.GetAxisRaw("Horizontal");
         if (input > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(scale.x, scale.y, scale.z);
         }
         else if (input < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-scale.x, scale.y, scale.z);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
@@ -46,12 +51,28 @@ public class PlayerControlGelecek : MonoBehaviour
             targetVelocity = new Vector2(input * speed, rb.velocity.y);
 
             rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.fixedDeltaTime * 10f);
-            if (isGrounded && isJumped)
+            if (isGrounded() && isJumped)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumped = false;
             }
         }
 
+    }
+    public bool isGrounded()
+    {
+        if(Physics2D.BoxCast(transform.position, boxSize, 0,-transform.up, castDistance, groundLayer))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position-transform.up * castDistance,boxSize);
     }
 }
