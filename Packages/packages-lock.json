@@ -70,6 +70,7 @@
         "com.unity.modules.uielements": "1.0.0"
       }
     },
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     "com.unity.2d.tilemap.extras": {
       "version": "3.0.3",
@@ -85,6 +86,8 @@
     },
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> 5f13e87c39f7c755fdc3275ef0eb6a1f50f7b003
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 0,
@@ -95,7 +98,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
+<<<<<<< HEAD
       "version": "1.8.2",
+=======
+      "version": "1.8.4",
+>>>>>>> 5f13e87c39f7c755fdc3275ef0eb6a1f50f7b003
       "depth": 2,
       "source": "registry",
       "dependencies": {
