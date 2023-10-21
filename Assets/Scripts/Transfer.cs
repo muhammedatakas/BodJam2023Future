@@ -21,7 +21,7 @@ public class Transfer : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno==0)
         {
-            Players[1].transform.position = new Vector2(Players[0].transform.position.x, 51.0f);
+            Players[1].transform.position = new Vector2(Players[0].transform.position.x,Players[0].transform.position.y + 51.0f);
             camera.transform.position = new Vector3(9,Players[1].transform.position.y,-10);
             Players[playerno].SetActive(false);
             playerno++;
@@ -29,7 +29,7 @@ public class Transfer : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno == 1)
         {
-            Players[0].transform.position = new Vector2(Players[1].transform.position.x, 1.0f);
+            Players[0].transform.position = new Vector2(Players[1].transform.position.x,Players[1].transform.position.y - 51.0f);
             camera.transform.position = new Vector3(9,Players[0].transform.position.y,-10);
             Players[playerno].SetActive(false);
             playerno--;
