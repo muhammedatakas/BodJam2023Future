@@ -13,7 +13,7 @@ public class openDoor : MonoBehaviour
 
     void Update()
     {
-        if (isDoorOpen)
+       /* if (isDoorOpen)
         {
            
             if (Input.GetKeyDown(KeyCode.R))
@@ -29,7 +29,7 @@ public class openDoor : MonoBehaviour
                 OpenDoor();
             }
         }
-    
+    */
         }
 
     void OpenDoor()
@@ -57,7 +57,7 @@ public class openDoor : MonoBehaviour
             {
                 CloseDoor();
             }
-            else
+           else if(!isDoorOpen) 
             {
                 OpenDoor();
             }
