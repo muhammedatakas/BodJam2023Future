@@ -17,11 +17,11 @@ public class AdultAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x == 0)
-        {
-            animator.SetBool("isWalking", false);
-        }
-        if (rb.velocity.x > 0.04 || rb.velocity.x < -0.04) { animator.SetBool("isWalking", true); }
+        Debug.Log(rb.velocity.x);
+        
+       
+        if (rb.velocity.x > 0.2 || rb.velocity.x < -0.2) { animator.SetBool("isWalking", true); }
+        else animator.SetBool("isWalking", false);
         if (playerControlGelecek.isGrounded())
         {
             animator.SetBool("isGrounded", true);

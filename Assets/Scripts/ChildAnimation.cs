@@ -16,9 +16,9 @@ public class ChildAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x==0) {
-            animator.SetBool("isWalking", false); }
-        if (rb.velocity.x > 0.04 || rb.velocity.x < -0.04) { animator.SetBool("isWalking", true); }
+        
+        if (rb.velocity.x > 0.2 || rb.velocity.x < -0.2) { animator.SetBool("isWalking", true); }
+        else animator.SetBool("isWalking", false);
         if (playerControlSimdi.isGrounded())
         {
             animator.SetBool("isGrounded", true);
