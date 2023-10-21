@@ -24,20 +24,20 @@ public class CollectBattery : MonoBehaviour
         if (other.tag == "singleBat")
         {
             scoreManager.IncreaseSingleBat();
-            Destroy(sbattery);
+            Destroy(other.gameObject);
             Debug.Log(scoreManager.batteryCounter);
         }
 
         if (other.tag == "doubleBat") { 
         
             scoreManager.IncreaseDoubleBat();
-       Destroy (dbattery);
+            Destroy (other.gameObject);
         }
 
         if (other.tag == "tripleBat") { 
         
             scoreManager.IncreaseTripleBat();
-            Destroy(tbattery);
+            Destroy(other.gameObject);
         }
      }
 }
