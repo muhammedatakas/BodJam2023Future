@@ -9,10 +9,16 @@ public class MenuScript : MonoBehaviour
     public float transitionTime = 1f;
     public void StartGame()
     {
-        LoadNextLevel();
-        
+        LoadNextLevel();        
     }
-
+    public void Credits()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void Return()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex+1));
