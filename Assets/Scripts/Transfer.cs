@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Transfer : MonoBehaviour
 {    
-
+    public ScoreManager scoreManager;
     float coolDown = 3f;
     float lastTimeTransfer;
     public GameObject[] Players;
@@ -26,6 +26,7 @@ public class Transfer : MonoBehaviour
             Players[playerno].SetActive(false);
             playerno++;
             Players[playerno].SetActive(true);
+            scoreManager.DecreaseBattery();
         }
         else if (Input.GetKeyDown(KeyCode.E)  && Time.time - lastTimeTransfer > coolDown && playerno == 1)
         {
@@ -34,6 +35,7 @@ public class Transfer : MonoBehaviour
             Players[playerno].SetActive(false);
             playerno--;
             Players[playerno].SetActive(true);
+            scoreManager.DecreaseBattery();
         }
     }
     
