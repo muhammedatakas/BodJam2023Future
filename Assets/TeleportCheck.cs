@@ -24,11 +24,13 @@ public class TeleportCheck : MonoBehaviour
         {
             b = false;
         }
-    else
-        {
-            b = true;
-        }
     }
-
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.tag == "teleport")
+        {
+            b = true ;
+        }
+    }  
 
 }

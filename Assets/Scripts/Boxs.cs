@@ -26,7 +26,7 @@ public class Boxs : MonoBehaviour
     }
     private void MoveBox()
     {
-        oldBox.transform.position=new Vector3(newBox.transform.position.x,newBox.transform.position.y-50,oldBox.transform.position.z);
+        oldBox.transform.position=new Vector3(newBox.transform.position.x,newBox.transform.position.y-49.25f,oldBox.transform.position.z);
 
     }
 

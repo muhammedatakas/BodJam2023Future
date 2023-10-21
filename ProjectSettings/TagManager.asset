@@ -14,6 +14,7 @@ TagManager:
   - doubleBat
   - tripleBat
   - fullBat
+  - teleport
   layers:
   - Default
   - TransparentFX
