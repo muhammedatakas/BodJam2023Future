@@ -17,7 +17,7 @@ public class AdultAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity.x);
+        
         
        
         if (rb.velocity.x > 0.2 || rb.velocity.x < -0.2) { animator.SetBool("isWalking", true); }
