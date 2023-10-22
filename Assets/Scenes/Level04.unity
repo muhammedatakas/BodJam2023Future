@@ -480,6 +480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: olddoorside
       objectReference: {fileID: 0}
+    - target: {fileID: 123283971882289696, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
+      propertyPath: m_TagString
+      value: Level
+      objectReference: {fileID: 0}
     - target: {fileID: 927972568745685391, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
       propertyPath: m_Sprite
       value: 
