@@ -18,6 +18,7 @@ public class PlayerControlSimdi : MonoBehaviour
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
+    public ScoreManager scoreManager;
 
     void Start()
     {
@@ -80,7 +81,7 @@ public class PlayerControlSimdi : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Level"))
+        if (collision.gameObject.CompareTag("Level") && scoreManager.score>=1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
