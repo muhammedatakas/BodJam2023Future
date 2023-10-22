@@ -73,3 +73,8 @@ crashlytics-build.properties
 *.json
 Packages/packages-lock.json
 ProjectSettings/ProjectVersion.txt
+Packages/packages-lock.json
+Packages/packages-lock.json
+Assets/leveltestata_Profiles.meta
+Assets/New Universal Render Pipeline Asset.asset
+Assets/New Universal Render Pipeline Asset_Renderer.asset
