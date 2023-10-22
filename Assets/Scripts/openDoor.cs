@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class openDoor : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class openDoor : MonoBehaviour
         door.GetComponent<SpriteRenderer>().sprite = openedDoorSprite;
         isDoorOpen = true;
         door.GetComponent<Rigidbody2D>().simulated = false;
+        
     }
 
     void CloseDoor()
@@ -63,4 +65,6 @@ public class openDoor : MonoBehaviour
             }
         }
     }
+
+    
 }
