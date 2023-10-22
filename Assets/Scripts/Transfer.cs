@@ -33,7 +33,7 @@ public class Transfer : MonoBehaviour
             playerno++;
             Players[playerno].SetActive(true);
             scoreManager.DecreaseBattery();
-            
+            AudioSource.PlayClipAtPoint(AudioManager.instance.teleportSound,transform.position);
         }
         else if (Input.GetKeyDown(KeyCode.E) && playerno == 1 && scoreManager.batteryCounter > 0 && teleportCheck.b)
         {
@@ -44,6 +44,8 @@ public class Transfer : MonoBehaviour
             playerno--;
             Players[playerno].SetActive(true);
             scoreManager.DecreaseBattery();
+             AudioSource.PlayClipAtPoint(AudioManager.instance.teleportSound,transform.position);
+
             
         }
     }

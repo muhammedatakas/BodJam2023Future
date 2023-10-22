@@ -26,6 +26,8 @@ public void OnTriggerEnter2D(Collider2D other)
             scoreManager.IncreaseScore();
             Destroy(anahtar);
             Debug.Log(scoreManager.score);
+                            AudioSource.PlayClipAtPoint(AudioManager.instance.keySound,transform.position);
+
         }
     }
 }

@@ -4607,6 +4607,10 @@ PrefabInstance:
       propertyPath: castDistance
       value: 1.83
       objectReference: {fileID: 0}
+    - target: {fileID: 1501487388074587541, guid: b33d7f0214bed4a4f9e9d23712d95650, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 542010646}
     - target: {fileID: 1966645417980711225, guid: b33d7f0214bed4a4f9e9d23712d95650, type: 3}
       propertyPath: m_Follow
       value: 

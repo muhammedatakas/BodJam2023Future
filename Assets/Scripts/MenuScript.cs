@@ -13,11 +13,11 @@ public class MenuScript : MonoBehaviour
     }
     public void Credits()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(8);
     }
     public void Return()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
     public void LoadNextLevel()
     {

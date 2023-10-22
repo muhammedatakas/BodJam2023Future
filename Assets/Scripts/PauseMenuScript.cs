@@ -33,7 +33,7 @@ public class PauseMenuScript : MonoBehaviour
     public void menu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void Restart()

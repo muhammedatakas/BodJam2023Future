@@ -56,6 +56,8 @@ public class PlayerControlGelecek : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumped = false;
+                                AudioSource.PlayClipAtPoint(AudioManager.instance.jumpSound,transform.position);
+
             }
         }
 
@@ -81,6 +83,7 @@ public class PlayerControlGelecek : MonoBehaviour
         if (collision.gameObject.CompareTag("Level"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+              
         }
     }
 }

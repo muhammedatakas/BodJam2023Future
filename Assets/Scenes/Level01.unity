@@ -789,6 +789,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150373237}
   m_CullTransparentMesh: 1
+--- !u!1 &156506591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 156506593}
+  - component: {fileID: 156506592}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &156506592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156506591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54863f564f0fc4f4bb0311b2aedbc9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keySound: {fileID: 8300000, guid: e82948c90fab75249bf987a23de4b66c, type: 3}
+  batterySound: {fileID: 8300000, guid: 9a6d371a388f64647b1014895726f4dc, type: 3}
+  jumpSound: {fileID: 8300000, guid: 1ea62164c2090db46ba76551bfd86b30, type: 3}
+  teleportSound: {fileID: 8300000, guid: f5edafc03f4c951478521aa5ba051bc8, type: 3}
+  changeSceneSound: {fileID: 8300000, guid: fce30f32bcec7814284de014a2c9ba14, type: 3}
+--- !u!4 &156506593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156506591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.524893, y: 57.14146, z: -10.257647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168814269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6780,3 +6829,4 @@ SceneRoots:
   - {fileID: 1681155135}
   - {fileID: 237997249}
   - {fileID: 358155967}
+  - {fileID: 156506593}

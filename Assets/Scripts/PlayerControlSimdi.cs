@@ -57,6 +57,8 @@ public class PlayerControlSimdi : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumped = false;
+                AudioSource.PlayClipAtPoint(AudioManager.instance.jumpSound,transform.position);
+
             }
         }
 
@@ -84,6 +86,8 @@ public class PlayerControlSimdi : MonoBehaviour
         if (collision.gameObject.CompareTag("Level") && scoreManager.score>=1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+               AudioSource.PlayClipAtPoint(AudioManager.instance.changeSceneSound,transform.position);             
+
         }
     }
 }

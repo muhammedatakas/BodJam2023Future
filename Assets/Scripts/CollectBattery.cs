@@ -26,18 +26,22 @@ public class CollectBattery : MonoBehaviour
             scoreManager.IncreaseSingleBat();
             Destroy(other.gameObject);
             Debug.Log(scoreManager.batteryCounter);
+                            AudioSource.PlayClipAtPoint(AudioManager.instance.batterySound,transform.position);
+
         }
 
         if (other.tag == "doubleBat") { 
         
             scoreManager.IncreaseDoubleBat();
-            Destroy (other.gameObject);
+            Destroy (other.gameObject);                            AudioSource.PlayClipAtPoint(AudioManager.instance.batterySound,transform.position);
+
         }
 
         if (other.tag == "tripleBat") { 
         
             scoreManager.IncreaseTripleBat();
-            Destroy(other.gameObject);
+            Destroy(other.gameObject);                            AudioSource.PlayClipAtPoint(AudioManager.instance.batterySound,transform.position);
+
         }
      }
 }
