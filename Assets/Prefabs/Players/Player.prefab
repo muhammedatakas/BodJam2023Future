@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfa1519043d942449304bfee2ace81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 9
   boxSize: {x: 1, y: 1}
   castDistance: 2.72
   groundLayer:
@@ -761,7 +762,7 @@ Transform:
   - {fileID: 2568079844974034533}
   - {fileID: 3114393943314678649}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3697918866109808529
 MonoBehaviour:
@@ -775,7 +776,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1379a1dafcdcffc40a6651b89cde5bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportCheck: {fileID: 0}
   Players:
   - {fileID: 1451090891442220882}
   - {fileID: 2505471022434189796}
   camera: {fileID: 0}
+  scoreManager: {fileID: 0}
+  firstCamera: {fileID: 0}
+  secondCamera: {fileID: 0}
+  spriteMask: {fileID: 0}
+  maskhizi: 0
