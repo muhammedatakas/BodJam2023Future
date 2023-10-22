@@ -70,24 +70,6 @@
         "com.unity.modules.uielements": "1.0.0"
       }
     },
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-    "com.unity.2d.tilemap.extras": {
-      "version": "3.0.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.tilemap": "1.0.0",
-        "com.unity.2d.tilemap": "1.0.0",
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> 5f13e87c39f7c755fdc3275ef0eb6a1f50f7b003
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 0,
@@ -154,7 +136,8 @@
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.spriteshape": "9.0.1",
         "com.unity.2d.tilemap": "1.0.0",
-        "com.unity.2d.tilemap.extras": "3.0.3"
+        "com.unity.2d.tilemap.extras": "3.1.1",
+        "com.unity.2d.aseprite": "1.0.0"
       }
     },
     "com.unity.ide.rider": {
