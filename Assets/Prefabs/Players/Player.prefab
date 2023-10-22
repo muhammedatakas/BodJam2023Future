@@ -761,7 +761,6 @@ Transform:
   m_Children:
   - {fileID: 2568079844974034533}
   - {fileID: 3114393943314678649}
-  - {fileID: 1774484615730149510}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -785,5 +784,3 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   firstCamera: {fileID: 0}
   secondCamera: {fileID: 0}
-  spriteMask: {fileID: 0}
-  maskhizi: 0
