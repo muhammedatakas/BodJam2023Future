@@ -8,7 +8,7 @@ public class Transfer : MonoBehaviour
 {
     public TeleportCheck teleportCheck;
     public static bool isAtAdult;
-    float coolDown = 3f;
+    //float coolDown = 3f;
     float lastTimeTransfer;
     public GameObject[] Players;
     int playerno;
