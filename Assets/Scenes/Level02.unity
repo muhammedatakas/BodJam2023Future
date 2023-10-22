@@ -563,10 +563,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: olddoorside
       objectReference: {fileID: 0}
+    - target: {fileID: 123283971882289696, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
+      propertyPath: m_TagString
+      value: Level
+      objectReference: {fileID: 0}
     - target: {fileID: 927972568745685391, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 32abe7fddc0ad7443b72e053198075c5, type: 3}
+    - target: {fileID: 927972568745685391, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 4062744387804314107, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
       propertyPath: scoreManager
       value: 
@@ -579,6 +587,14 @@ PrefabInstance:
       propertyPath: openedDoorSprite
       value: 
       objectReference: {fileID: 21300000, guid: 32abe7fddc0ad7443b72e053198075c5, type: 3}
+    - target: {fileID: 9097224754573984460, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097224754573984460, guid: 146eed69ccb3b0242a3dadb408e361cf, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2216,7 +2232,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4098,7 +4114,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16

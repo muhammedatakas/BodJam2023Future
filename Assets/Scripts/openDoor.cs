@@ -38,7 +38,7 @@ public class openDoor : MonoBehaviour
         door.GetComponent<SpriteRenderer>().sprite = openedDoorSprite;
         isDoorOpen = true;
         door.GetComponent<Rigidbody2D>().simulated = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 
     void CloseDoor()
@@ -65,4 +65,6 @@ public class openDoor : MonoBehaviour
             }
         }
     }
+
+    
 }
