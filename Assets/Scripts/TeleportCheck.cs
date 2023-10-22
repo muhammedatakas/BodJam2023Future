@@ -6,6 +6,7 @@ using UnityEngine;
 public class TeleportCheck : MonoBehaviour
 {
     public bool b;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class TeleportCheck : MonoBehaviour
         if(other.tag == "teleport")
         {
             b = false;
+            
         }
     }
     public void OnTriggerExit2D(Collider2D other)
@@ -30,6 +32,7 @@ public class TeleportCheck : MonoBehaviour
         if(other.tag == "teleport")
         {
             b = true ;
+            
         }
     }  
 
